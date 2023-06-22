@@ -40,7 +40,7 @@ app.use(express.json())
 app.use(cors({
   origin:["https://notagram-app.onrender.com"],
   methods: ["GET","POST"],
-  //Credential: true
+  Credential: false
 }))
 
 app.use(cookieParser())
