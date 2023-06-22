@@ -45,7 +45,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 app.use(session({
   key: 'userLogged',
-  secret: 'key',
+  secret: process.env.KEY,
   resave: false,
   saveUninitialized: false,
   cookie: {
