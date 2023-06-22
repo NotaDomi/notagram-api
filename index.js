@@ -37,11 +37,11 @@ const router = require('./routes/api')
 const authMiddleware = require('./middlewares/auth')
 
 app.use(express.json())
-app.use(cors({
+app.use(cors(/*{
   origin:["https://notagram-app.onrender.com"],
   methods: ["GET","POST"],
   Credential: true
-}))
+}*/))
 
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({extended:true}))
