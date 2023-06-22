@@ -5,19 +5,22 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const cors = require('cors')
-const https = require('https')
+//const https = require('https')
+const http = require('http')
 const fs = require('fs')
 
 const PORT=process.env.PORT || '3001'
 
 const app = express()
 
-const options = {
+/*const options = {
   key: fs.readFileSync('server.key'),
   cert: fs.readFileSync('server.crt')
 }
 
-const server = https.createServer(options, app)
+const server = https.createServer(options, app)*/
+
+const server = http.createServer(app)
 
 mongoose.connect(process.env.DATABASE_URI)
 
