@@ -52,6 +52,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
+    domain: "notagram-api.onrender.com",
     maxAge: 24*60*60*1000,
     sameSite: true,
     //secure: true,
